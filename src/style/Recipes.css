@@ -1,0 +1,87 @@
+.recipes-container {
+  & h1 {
+    padding: 0 1rem;
+    font-size: x-large;
+    font-weight: 400;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 50px;
+      border-bottom: 4px solid var(--peach-yellow);
+      border-radius: 5px;
+    }
+
+    & b {
+      color: var(--persian-orange);
+      font-style: italic;
+    }
+  }
+
+  .swiper-container {
+    display: flex;
+    flex-direction: column;
+
+    .swiper-slide-active {
+      &:hover img {
+        transition: 0.6s ease-in-out;
+        transform: scale(1.05);
+        filter: brightness(70%) blur(0) grayscale(0) sepia(0);
+      }
+
+      & img {
+        transition: 0.7s ease-in-out;
+        transform: scale(1.07);
+        filter: brightness(65%) blur(0.7px) grayscale(5%) sepia(5%);
+        height: 18.5rem;
+      }
+    }
+
+    .swiper-slide-shadow-left,
+    .swiper-slide-shadow-right {
+      display: none;
+    }
+  }
+}
+
+.slider-controler {
+  margin: 0 0 80px 0;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .slider-arrow {
+    background: var(--khaki);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+
+    &::after {
+      content: '';
+    }
+
+    & ion-icon {
+      color: black;
+      transition: 0.5s;
+    }
+
+    &:hover ion-icon {
+      color: var(--peach-yellow);
+      transform: scale(1.3);
+      transition: 0.5s;
+    }
+  }
+
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      background: var(--moss-green);
+
+      margin: 17px 3px 0 3px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: var(--desert-sand);
+    }
+  }
+}

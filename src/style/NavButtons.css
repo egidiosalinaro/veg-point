@@ -1,0 +1,23 @@
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  color: var(--moss-green);
+  font-weight: 600;
+
+  & div {
+    margin: 10px 30px;
+    cursor: pointer;
+    transition: 0.8s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      color: var(--persian-orange);
+      transition: 0.8s ease;
+    }
+  }
+
+  & svg {
+    vertical-align: bottom;
+    padding: 0 6px 3px 6px;
+  }
+}

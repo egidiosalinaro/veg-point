@@ -1,0 +1,21 @@
+.instruction-box {
+  display: flex;
+  align-items: center;
+  padding: 10px 35px;
+  border-radius: 50px;
+
+  &.light {
+    background-color: white;
+  }
+
+  .instruction-index {
+    color: var(--peach-yellow);
+    background-color: var(--moss-green);
+    padding: 2px 8px 2px 7px;
+    border-radius: 100% 100% 0 100%;
+  }
+
+  .instruction-text {
+    padding: 0 0 0 20px;
+  }
+}

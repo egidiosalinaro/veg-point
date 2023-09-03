@@ -1,0 +1,119 @@
+.recipe-details {
+  & h1 {
+    padding: 0 1rem;
+    font-size: x-large;
+    font-weight: 700;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 50px;
+      border-bottom: 4px solid var(--peach-yellow);
+      border-radius: 5px;
+    }
+  }
+
+  & h2 {
+    padding: 0 1.5rem;
+    font-size: large;
+    font-weight: 600;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 50px;
+      border-bottom: 3px solid var(--persian-orange);
+      border-radius: 5px;
+    }
+  }
+
+  .top-section {
+    position: relative;
+    margin: 0 2rem 3rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+
+    & img {
+      border-radius: 60px 0 0 10px;
+      box-shadow: 8px 5px 7px var(--peach-yellow);
+    }
+
+    .recipe-info {
+      flex: 1;
+      padding: 0 0 0 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start;
+
+      background-color: white;
+      border-radius: 0 10px 60px 0;
+      box-shadow: 5px 5px 7px var(--peach-yellow);
+
+      & svg {
+        color: var(--persian-orange);
+        margin: 0 7px 0 0;
+        vertical-align: bottom;
+      }
+    }
+
+    .save-favorite-button {
+      font-size: 15px;
+      font-weight: 300;
+      text-transform: uppercase;
+
+      background-color: var(--jasmine);
+      color: var(--persian-orange);
+      cursor: pointer;
+      border: 1px solid var(--persian-orange);
+      border-radius: 4px;
+
+      display: flex;
+      align-items: center;
+      position: absolute;
+      bottom: 8px;
+      left: 468px;
+      padding: 1px 10px 1px 9px;
+
+      &:hover {
+        background-image: linear-gradient(rgb(0 0 0 / 5%) 0 0);
+      }
+
+      & svg {
+        margin-right: 5px;
+        vertical-align: bottom;
+      }
+    }
+
+    .unsave {
+      left: 446px;
+    }
+  }
+
+  .ingredients-container {
+    margin: 0 0 3rem 0;
+
+    .swiper-container {
+      padding: 1rem 0 2.8rem 0;
+    }
+
+    .swiper-scrollbar {
+      background-color: var(--jasmine);
+    }
+
+    .swiper-scrollbar-drag {
+      background-color: var(--persian-orange);
+
+      &:hover,
+      &:active {
+        background-color: rgba(var(--persian-orange-rgb), 0.6);
+      }
+    }
+  }
+
+  .instructions {
+    margin: 0 0 3rem 0;
+  }
+}

@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import ShowRecipe from './pages/ShowRecipe';
+import Favorites from './pages/Favorites';
+import ShowSearched from './pages/ShowSearched';
+import FavoritesContextProvider from './context/FavoritesContextProvider';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <FavoritesContextProvider>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/search/:query" element={<ShowSearched />} />
+          <Route path="/recipe/:id" element={<ShowRecipe />} />
+          <Route path="/favorites/" element={<Favorites />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </FavoritesContextProvider>
+    </Router>
   );
-}
+};
 
 export default App;
+
+function NotFound() {
+  return <>You have landed on a page that doesn't exist</>;
+}

@@ -1,0 +1,38 @@
+#searchbar {
+  margin: 0 10px;
+  flex: 1;
+
+  height: 35px;
+  border-radius: 20px;
+
+  & form {
+    display: flex;
+    margin: 0 0 0 8px;
+
+    & input {
+      background-color: transparent;
+      border: none;
+      flex: 1;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    & textarea:focus,
+    input:focus {
+      outline: none;
+    }
+
+    .search-icon {
+      cursor: pointer;
+      margin: 7px 10px 0 0;
+      padding: 1px 0 0 0;
+    }
+  }
+}
+
+.searchbar {
+  box-shadow: 1px 2px 3px var(--moss-green);
+}
+
+.searchbar-focus {
+  box-shadow: 1px 3px 3px var(--peach-yellow);
+}

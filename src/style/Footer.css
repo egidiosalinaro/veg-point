@@ -1,0 +1,31 @@
+footer {
+  color: var(--reseda-green);
+  background: linear-gradient(to bottom, var(--background), var(--khaki));
+
+  margin-top: auto;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  & img {
+    height: 50px;
+  }
+
+  & a {
+    color: var(--reseda-green);
+    margin: 0 10px;
+  }
+
+  & svg {
+    vertical-align: bottom;
+  }
+
+  & svg:hover {
+    color: var(--persian-orange);
+    transform: scale(110%);
+    transition: 0.5s ease-in-out;
+  }
+}
