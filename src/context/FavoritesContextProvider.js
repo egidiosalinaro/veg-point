@@ -16,7 +16,7 @@ const FavoritesContextProvider = props => {
     setFavRecipes(favRecipes.filter(recipe => recipe.id !== id));
   };
 
-  //fetch localstorage at the first loading
+  //fetching localstorage data at first loading
   useEffect(() => {
     const localData = localStorage.getItem('Favorite Recipes');
     if (localData) {
@@ -24,7 +24,7 @@ const FavoritesContextProvider = props => {
     }
   }, []);
 
-  //update localstorage when favRecipes changes
+  //updating localstorage on any favRecipes change
   useEffect(() => {
     localStorage.setItem('Favorite Recipes', JSON.stringify(favRecipes));
   }, [favRecipes]);

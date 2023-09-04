@@ -1,19 +1,19 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import { FavoritesContext } from '../context/FavoritesContextProvider';
 import axios from 'axios';
 
-import { BiRestaurant, BiHeart, BiFoodMenu } from 'react-icons/bi';
-import { TfiTimer } from 'react-icons/tfi';
-import { GiMilkCarton } from 'react-icons/gi';
-import { BsXDiamondFill, BsHeart, BsHeartFill } from 'react-icons/bs';
-
+import { FavoritesContext } from '../context/FavoritesContextProvider';
 import Ingredient from './Ingredient';
 import Instruction from './Instruction';
 import Card from './Card';
 import LoadingSpinner from './LoadingSpinner';
 import NavButtons from './NavButtons';
 import noImage from '../img/no-image.png';
+
+import { BiRestaurant, BiHeart, BiFoodMenu } from 'react-icons/bi';
+import { TfiTimer } from 'react-icons/tfi';
+import { GiMilkCarton } from 'react-icons/gi';
+import { BsXDiamondFill, BsHeart, BsHeartFill } from 'react-icons/bs';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, {
@@ -28,26 +28,24 @@ import 'swiper/swiper-bundle.min.css';
 SwiperCore.use([Scrollbar, Autoplay, EffectCoverflow, Pagination, Navigation]);
 
 export default function RecipeDetails() {
+  const [isLoading, setIsLoading] = useState(false);
   const [recipe, setRecipe] = useState({});
   const [favorite, setFavorite] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [similarRecipes, setSimilarRecipes] = useState({});
   const { favRecipes, addFavRecipe, removeFavRecipe } =
     useContext(FavoritesContext);
+  const [similarRecipes, setSimilarRecipes] = useState({});
   const { id } = useParams();
 
   const fetchRecipe = async id => {
     setIsLoading(true);
     try {
-      // fetch recipe main data
-
+      // fetching recipe main data
       const response = await axios.get(
         `https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.REACT_APP_API_KEY}&includeNutrition=false`
       );
       setRecipe(response.data);
 
-      // fetch similar recipes by id
-
+      // fetching similar recipes via id
       const similar = await axios.get(
         `https://api.spoonacular.com/recipes/${id}/similar?apiKey=${process.env.REACT_APP_API_KEY}&number=6`
       );
@@ -73,12 +71,13 @@ export default function RecipeDetails() {
     setFavorite(!favorite);
   };
 
-  // fetch recipes on loading
+  // fetching the recipe on loading
   useEffect(() => {
     window.scrollTo(0, 0);
     fetchRecipe(id);
   }, [id]);
 
+  // checking if current recipe is already favorite
   useEffect(() => {
     favRecipes.find(fav => fav.id === Number(id))
       ? setFavorite(true)
@@ -92,11 +91,13 @@ export default function RecipeDetails() {
           <LoadingSpinner />
         </div>
       )}
+
       {isLoading === false && recipe && Object.keys(recipe).length === 0 && (
         <div className="search-loader">
           <p>No data found. Try to reload the page.</p>
         </div>
       )}
+
       {isLoading === false && recipe && Object.keys(recipe).length > 0 && (
         <>
           <h1 className="recipe-title">{recipe.title}</h1>
@@ -214,6 +215,7 @@ export default function RecipeDetails() {
               ))}
             </Swiper>
           </div>
+
           <div className="instructions">
             <h2>Instructions</h2>
             {recipe.analyzedInstructions &&
@@ -228,6 +230,7 @@ export default function RecipeDetails() {
                 );
               })}
           </div>
+
           <div className="recipes-container">
             <h1>Similar Recipes</h1>
             <Swiper
@@ -306,6 +309,7 @@ export default function RecipeDetails() {
               </div>
             </Swiper>
           </div>
+
           <NavButtons />
         </>
       )}

@@ -1,5 +1,6 @@
 import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+
 import { FavoritesContext } from '../context/FavoritesContextProvider';
 
 import { BsPeople, BsHeart, BsHeartFill } from 'react-icons/bs';
@@ -39,6 +40,7 @@ export default function Card(props) {
           </h4>
         </div>
       </Link>
+
       <div className="favorite-button">
         {favorite ? (
           <BsHeartFill

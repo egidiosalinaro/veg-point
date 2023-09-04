@@ -16,11 +16,10 @@ import 'swiper/swiper-bundle.min.css';
 SwiperCore.use([Autoplay, EffectCoverflow, Pagination, Navigation]);
 
 export default function TodaysPicks() {
+  const [isLoading, setIsLoading] = useState(true); // loader
   const [picks, setPicks] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
 
   // fetch random recipes for the homepage
-
   const downloadPicks = async () => {
     setIsLoading(true);
     try {
@@ -32,6 +31,7 @@ export default function TodaysPicks() {
     } catch (error) {
       console.log(error);
     }
+
     setTimeout(() => {
       setIsLoading(false);
     }, 1000);
@@ -46,6 +46,7 @@ export default function TodaysPicks() {
     <div className="recipes-container">
       <h1>Today's Picks</h1>
       {isLoading === true && <LoadingSpinner />}
+
       {isLoading === false && picks && picks.length === 0 && (
         <div className="search-loader">
           <p className="text-center">
@@ -54,6 +55,7 @@ export default function TodaysPicks() {
           </p>
         </div>
       )}
+
       {isLoading === false && picks && picks.length > 0 && (
         <>
           <p>Are you out of ideas? Check out our vegetarian daily selection.</p>

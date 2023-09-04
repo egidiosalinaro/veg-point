@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-import SearchFilters from './Filters';
+import SearchFilters from './SearchFilters';
 import Card from './Card';
 import LoadingSpinner from './LoadingSpinner';
+
 import { GiFunnel } from 'react-icons/gi';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,55 +15,47 @@ import 'swiper/swiper-bundle.min.css';
 SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
 
 export default function RecipesCarousel() {
-  const [showFilters, setShowFilters] = useState(false);
+  const [isLoading, setIsLoading] = useState(true); // loader
   const [recipes, setRecipes] = useState([]);
   const [searchAPI, setSearchAPI] = useState([]); // download API memory
-  const [isLoading, setIsLoading] = useState(true); // loader
 
+  const [showFilters, setShowFilters] = useState(false); // filters popup state
   const [vegan, setVegan] = useState(false); // vegan filter on/off
-  const [cooktime, setCooktime] = useState(60); // max cooking time filter option
-  const [dairy, setDairy] = useState(false); // dairy free filter option
-  const [gluten, setGluten] = useState(false); // gluten free filter option
+  const [dairy, setDairy] = useState(false); // dairy free filter
+  const [gluten, setGluten] = useState(false); // gluten free filter
+  const [cooktime, setCooktime] = useState(60); // max cooking time filter
 
   const { query } = useParams();
 
-  //link filter state data
-
+  //linking filters data
   const handleVegan = vegan => {
     setVegan(vegan);
   };
-
-  const handleTime = time => {
-    setCooktime(time);
-  };
-
   const handleDairy = dairy => {
     setDairy(dairy);
   };
-
   const handleGluten = gluten => {
     setGluten(gluten);
+  };
+  const handleTime = time => {
+    setCooktime(time);
   };
 
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    // fetch recipes data
-
     const searchRecipes = async query => {
       setIsLoading(true);
       setRecipes([]);
       try {
-        //fetch searched recipes ids
-
+        //fetching searched recipes ids
         const searchResponse = await axios.get(
           `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&number=8&query=${query}&diet=vegetarian`
         );
         const data = searchResponse.data.results;
         const recipesId = data.map(recipe => recipe.id).toString();
 
-        //fetch full recipes data
-
+        //fetching recipes full data
         const recipesResponse = await axios.get(
           `https://api.spoonacular.com/recipes/informationBulk?apiKey=${process.env.REACT_APP_API_KEY}&ids=${recipesId}`
         );
@@ -80,6 +73,7 @@ export default function RecipesCarousel() {
     searchRecipes(query);
   }, [query]);
 
+  //filtering search results
   useEffect(() => {
     const applyFilters = () => {
       let newRecipes = searchAPI;
@@ -108,8 +102,9 @@ export default function RecipesCarousel() {
   return (
     <div className="recipes-container">
       <h1>
-        Vegetarian search sesults for <b>{query}</b>
+        Vegetarian search results for <b>{query}</b>
       </h1>
+
       <div className="search-filters-section">
         <div className="filter-button" onClick={() => setShowFilters(true)}>
           <span>Filters</span>
@@ -130,16 +125,19 @@ export default function RecipesCarousel() {
           closePopup={() => setShowFilters(false)}
         />
       </div>
+
       {recipes.length === 0 && isLoading === false && (
         <div className="search-loader">
           <p>No recipes found.</p>
         </div>
       )}
+
       {recipes.length === 0 && isLoading === true && (
         <div className="search-loader">
           <LoadingSpinner />
         </div>
       )}
+
       {recipes.length > 0 && (
         <Swiper
           className="swiper-container"

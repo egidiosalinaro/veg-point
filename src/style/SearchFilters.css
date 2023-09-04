@@ -11,6 +11,10 @@
     padding: 5px 10px;
     margin: 0 0 0 20px;
 
+    &:hover {
+      transform: scale(0.95);
+    }
+
     & svg {
       vertical-align: middle;
       padding: 0 0 4px 5px;
@@ -71,6 +75,7 @@
       margin: 0 0 20px 0;
 
       & input {
+        cursor: pointer;
         display: block;
         width: 40px;
         height: 40px;
@@ -80,7 +85,8 @@
         background-position: center center;
         background-size: contain;
 
-        &:checked {
+        &:checked,
+        &:hover {
           border: 2px solid var(--moss-green);
           border-radius: 100%;
         }
@@ -136,6 +142,10 @@
       background-color: var(--moss-green);
       color: var(--jasmine);
       border-radius: 20px;
+
+      &:hover {
+        transform: scale(0.95);
+      }
     }
   }
 }

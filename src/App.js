@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import ShowRecipe from './pages/ShowRecipe';
-import Favorites from './pages/Favorites';
-import ShowSearched from './pages/ShowSearched';
+
 import FavoritesContextProvider from './context/FavoritesContextProvider';
+import Home from './pages/Home';
+import SearchResults from './pages/SearchResults';
+import Recipe from './pages/Recipe';
+import Favorites from './pages/Favorites';
 
 const App = () => {
   return (
@@ -12,8 +13,8 @@ const App = () => {
       <FavoritesContextProvider>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/search/:query" element={<ShowSearched />} />
-          <Route path="/recipe/:id" element={<ShowRecipe />} />
+          <Route path="/search/:query" element={<SearchResults />} />
+          <Route path="/recipe/:id" element={<Recipe />} />
           <Route path="/favorites/" element={<Favorites />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

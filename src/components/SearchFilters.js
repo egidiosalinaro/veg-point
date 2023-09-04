@@ -10,7 +10,12 @@ export default function SearchFilters({
   const [time, setTime] = useState(60);
 
   return (
-    <div className="filters-box">
+    <div
+      className="filters-box"
+      onClick={e => {
+        e.target === e.currentTarget && closePopup(true);
+      }}
+    >
       <div className="popup">
         <div className="diets">
           <div className="vegan">

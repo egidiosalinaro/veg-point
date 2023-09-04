@@ -3,17 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import { BiSearch } from 'react-icons/bi';
 
 const SearchBar = forwardRef((props, ref) => {
-  const [input, setInput] = useState(''); // inputs from the user keyboard
+  const [input, setInput] = useState(''); // detecting inputs from user keyboard
   const [focus, setFocus] = useState('searchbar');
 
   let navigate = useNavigate();
 
-  // capture search bar inputs
-
+  // capturing search bar inputs
   const searchInput = e => setInput(e.target.value);
 
-  // handle submit from the form
-
+  // handling form submitting
   const submitHandler = e => {
     e.preventDefault();
     if (input) {

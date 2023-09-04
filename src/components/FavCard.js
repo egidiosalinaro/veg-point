@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+
 import { FavoritesContext } from '../context/FavoritesContextProvider';
 
 import { BsPeople } from 'react-icons/bs';
@@ -26,6 +27,7 @@ export default function FavCard(props) {
           </h4>
         </div>
       </Link>
+
       <div className="favorite-button">
         <FaTrashAlt
           onClick={() => {

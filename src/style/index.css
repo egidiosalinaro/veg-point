@@ -32,8 +32,8 @@ body {
 @import './SearchBar.css';
 @import './LoadingSpinner.css';
 @import './Card.css';
+@import './SearchFilters.css';
 @import './RecipesCarousel.css';
-@import './Filters.css';
 @import './RecipeDetails.css';
 @import './Ingredient.css';
 @import './Instruction.css';

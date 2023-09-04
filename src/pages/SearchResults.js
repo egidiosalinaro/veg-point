@@ -1,9 +1,9 @@
-import RecipesCarousel from '../components/RecipesCarousel';
 import Header from '../components/Header';
-import Footer from '../components/Footer';
+import RecipesCarousel from '../components/RecipesCarousel';
 import TodaysPicks from '../components/TodaysPicks';
+import Footer from '../components/Footer';
 
-export default function ShowSearched() {
+export default function SearchResults() {
   return (
     <>
       <Header />

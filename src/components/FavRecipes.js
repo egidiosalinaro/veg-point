@@ -1,10 +1,11 @@
 import { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaChevronCircleLeft } from 'react-icons/fa';
-import { FavoritesContext } from '../context/FavoritesContextProvider';
 
+import { FavoritesContext } from '../context/FavoritesContextProvider';
 import FavCard from './FavCard';
 import LoadingSpinner from './LoadingSpinner';
+
+import { FaChevronCircleLeft } from 'react-icons/fa';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { EffectCoverflow, Pagination, Navigation } from 'swiper';
@@ -35,8 +36,8 @@ export default function FavRecipes() {
         {!isLoading && favRecipes.length === 0 && (
           <div className="no-favorites">
             <p className="no-recipes">
-              No favorite recipes here. Save your favorite recipes by clicking
-              on the ♡
+              No saved favorite recipes here. Save your favorite recipes by
+              clicking on the ♡
             </p>
             <Link to={'/'}>
               <span className="favorites-back-home">
@@ -46,6 +47,7 @@ export default function FavRecipes() {
             </Link>
           </div>
         )}
+
         {favRecipes.length > 0 && (
           <Swiper
             className="swiper-container"

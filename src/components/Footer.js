@@ -4,7 +4,7 @@ import { FaGithubSquare, FaLinkedin } from 'react-icons/fa';
 export default function Footer() {
   return (
     <footer>
-      <img src={Logo} alt="Veggie Point logo" />
+      <img src={Logo} alt="Veg Point logo" />
       <small>Developed by Egidio Salinaro</small>
       <div className="footer-links-container">
         <a
