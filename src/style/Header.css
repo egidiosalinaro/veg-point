@@ -32,3 +32,29 @@
     text-decoration: none;
   }
 }
+
+@media all and (min-width: 400px) and (max-width: 500px) {
+  .header {
+    & img {
+      width: 90px;
+    }
+
+    .favorites {
+      font-size: 12px;
+      padding: 6px 4px;
+    }
+  }
+}
+
+@media all and (max-width: 400px) {
+  .header {
+    & img {
+      width: 70px;
+    }
+
+    .favorites {
+      font-size: 10px;
+      padding: 10px 6px;
+    }
+  }
+}

@@ -36,3 +36,18 @@
 .searchbar-focus {
   box-shadow: 1px 3px 3px var(--peach-yellow);
 }
+
+@media all and (min-width: 400px) and (max-width: 500px) {
+  #searchbar {
+    margin: 0 8px;
+    height: 30px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  #searchbar {
+    margin: 0 6px;
+    height: 30px;
+    overflow: hidden;
+  }
+}

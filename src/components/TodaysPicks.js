@@ -58,11 +58,35 @@ export default function TodaysPicks() {
       {isLoading === false && picks && picks.length > 0 && (
         <Swiper
           className="swiper-container"
+          breakpoints={{
+            // when window width is >= 18px
+            180: {
+              slidesPerView: 2,
+              spaceBetween: 0,
+            },
+            // when window width is >= 830px
+            600: {
+              slidesPerView: 2,
+              spaceBetween: 0,
+            },
+            // when window width is >= 1120px
+            950: {
+              slidesPerView: 3,
+              spaceBetween: 0,
+            },
+            1300: {
+              slidesPerView: 4,
+              spaceBetween: 0,
+            },
+            1600: {
+              slidesPerView: 5,
+              spaceBetween: 0,
+            },
+          }}
           effect={'coverflow'}
           grabCursor={true}
           centeredSlides={true}
           loop={true}
-          slidesPerView={'3'}
           coverflowEffect={{ rotate: 0, stretch: 0, depth: 100, modifier: 2.5 }}
           pagination={{ el: '.swiper-pagination', clickable: true }}
           navigation={{
