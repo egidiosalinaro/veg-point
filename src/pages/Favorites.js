@@ -1,12 +1,12 @@
 import Header from '../components/Header';
-import FavoritesPanel from '../components/FavoritesPanel';
+import FavRecipes from '../components/FavRecipes';
 import Footer from '../components/Footer';
 
 export default function Favorites() {
   return (
     <>
       <Header />
-      <FavoritesPanel />
+      <FavRecipes />
       <Footer />
     </>
   );

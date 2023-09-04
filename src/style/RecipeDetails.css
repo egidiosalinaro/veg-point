@@ -64,10 +64,10 @@
       font-weight: 300;
       text-transform: uppercase;
 
-      background-color: var(--jasmine);
-      color: var(--persian-orange);
+      background-color: var(--moss-green);
+      color: var(--jasmine);
       cursor: pointer;
-      border: 1px solid var(--persian-orange);
+      border: 1px solid var(--jasmine);
       border-radius: 4px;
 
       display: flex;

@@ -32,7 +32,7 @@ body {
 @import './SearchBar.css';
 @import './LoadingSpinner.css';
 @import './Card.css';
-@import './Recipes.css';
+@import './RecipesCarousel.css';
 @import './Filters.css';
 @import './RecipeDetails.css';
 @import './Ingredient.css';

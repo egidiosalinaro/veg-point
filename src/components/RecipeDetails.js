@@ -232,6 +232,31 @@ export default function RecipeDetails() {
             <h1>Similar Recipes</h1>
             <Swiper
               className="swiper-container"
+              breakpoints={{
+                // when window width is >= 18px
+                180: {
+                  slidesPerView: 2,
+                  spaceBetween: 0,
+                },
+                // when window width is >= 830px
+                600: {
+                  slidesPerView: 2,
+                  spaceBetween: 0,
+                },
+                // when window width is >= 1120px
+                950: {
+                  slidesPerView: 3,
+                  spaceBetween: 0,
+                },
+                1300: {
+                  slidesPerView: 4,
+                  spaceBetween: 0,
+                },
+                1600: {
+                  slidesPerView: 5,
+                  spaceBetween: 0,
+                },
+              }}
               effect={'coverflow'}
               grabCursor={true}
               centeredSlides={true}

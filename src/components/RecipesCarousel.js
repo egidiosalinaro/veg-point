@@ -13,7 +13,7 @@ import 'swiper/swiper.min.css';
 import 'swiper/swiper-bundle.min.css';
 SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
 
-export default function Recipes() {
+export default function RecipesCarousel() {
   const [showFilters, setShowFilters] = useState(false);
   const [recipes, setRecipes] = useState([]);
   const [searchAPI, setSearchAPI] = useState([]); // download API memory
@@ -108,7 +108,7 @@ export default function Recipes() {
   return (
     <div className="recipes-container">
       <h1>
-        Vegetarian Search Results for <b>{query}</b>
+        Vegetarian search sesults for <b>{query}</b>
       </h1>
       <div className="search-filters-section">
         <div className="filter-button" onClick={() => setShowFilters(true)}>

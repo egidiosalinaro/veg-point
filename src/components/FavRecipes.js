@@ -12,7 +12,7 @@ import 'swiper/swiper.min.css';
 import 'swiper/swiper-bundle.min.css';
 SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
 
-export default function FavoritesPanel() {
+export default function FavRecipes() {
   const { favRecipes } = useContext(FavoritesContext);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -35,8 +35,8 @@ export default function FavoritesPanel() {
         {!isLoading && favRecipes.length === 0 && (
           <div className="no-favorites">
             <p className="no-recipes">
-              No favorite recipes here. Save your favorite recipes clicking on
-              the ♡
+              No favorite recipes here. Save your favorite recipes by clicking
+              on the ♡
             </p>
             <Link to={'/'}>
               <span className="favorites-back-home">

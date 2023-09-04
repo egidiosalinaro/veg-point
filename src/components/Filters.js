@@ -39,12 +39,12 @@ export default function SearchFilters({
           </div>
         </div>
         <div className="cooking-time">
-          <label htmlFor="time-range">Max Cooking Time: {time} </label>
+          <label htmlFor="time-range">Max Cooking Time: {time}m </label>
           <input
             id="time-range"
             type="range"
             min="20"
-            max="90"
+            max="120"
             defaultValue="60"
             step="10"
             className="filter-time-slider"
