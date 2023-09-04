@@ -1,16 +1,36 @@
-.filter-button {
-  cursor: pointer;
-  background-color: var(--moss-green);
-  color: var(--jasmine);
-  width: fit-content;
-  border-radius: 20px;
-  padding: 5px 10px;
-  margin: 0 0 0 20px;
+.search-filters-section {
+  display: flex;
+  align-items: center;
 
-  & svg {
-    vertical-align: middle;
-    padding: 0 0 4px 5px;
+  .filter-button {
+    cursor: pointer;
+    background-color: var(--moss-green);
     color: var(--jasmine);
+    width: fit-content;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 0 0 0 20px;
+
+    & svg {
+      vertical-align: middle;
+      padding: 0 0 4px 5px;
+      color: var(--jasmine);
+    }
+  }
+
+  .active-filters {
+    margin: 0 0 0 20px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+
+    & div {
+      background-color: lightgray;
+      border-radius: 10px;
+      width: fit-content;
+      padding: 1px 6px;
+      transform: scale(0.8);
+    }
   }
 }
 
@@ -89,10 +109,21 @@
 
     .cooking-time {
       margin: 0 0 40px 0;
+      display: flex;
+
+      & label {
+        margin: 0 9px 0 0;
+      }
     }
 
     & button {
       text-transform: uppercase;
     }
+  }
+}
+
+@media all and (max-width: 400px) {
+  .search-filters-section {
+    font-size: 11px;
   }
 }

@@ -73,7 +73,7 @@
       display: flex;
       align-items: center;
       position: absolute;
-      bottom: 8px;
+      bottom: 7px;
       left: 468px;
       padding: 1px 10px 1px 9px;
 
@@ -115,5 +115,52 @@
 
   .instructions {
     margin: 0 0 3rem 0;
+  }
+}
+
+@media all and (min-width: 651px) and (max-width: 800px) {
+  .recipe-details {
+    .top-section {
+      & img {
+        max-width: 400px;
+      }
+
+      .save-favorite-button {
+        left: 314px;
+      }
+
+      .unsave {
+        left: 292px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 650px) {
+  .recipe-details {
+    .top-section {
+      flex-direction: column;
+
+      .recipe-info {
+        padding: 10px 0 10px 10px;
+        max-width: 580px;
+        min-height: 250px;
+        border-radius: 0 0 60px 10px;
+      }
+
+      & img {
+        max-width: 590px;
+        border-radius: 60px 10px 0 0;
+      }
+
+      .save-favorite-button {
+        left: 10px;
+        bottom: 277px;
+      }
+
+      .unsave {
+        left: 10px;
+      }
+    }
   }
 }

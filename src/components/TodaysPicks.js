@@ -45,6 +45,7 @@ export default function TodaysPicks() {
   return (
     <div className="recipes-container">
       <h1>Today's Picks</h1>
+      <p>Are you out of ideas? Check out our vegetarian daily selection.</p>
       {isLoading === true && <LoadingSpinner />}
       {isLoading === false && picks && picks.length === 0 && (
         <div className="search-loader">

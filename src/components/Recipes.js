@@ -19,7 +19,7 @@ export default function Recipes() {
   const [searchAPI, setSearchAPI] = useState([]); // download API memory
   const [isLoading, setIsLoading] = useState(true); // loader
 
-  const [diet, setDiet] = useState(false); // vegan filter on/off
+  const [vegan, setVegan] = useState(false); // vegan filter on/off
   const [cooktime, setCooktime] = useState(60); // max cooking time filter option
   const [dairy, setDairy] = useState(false); // dairy free filter option
   const [gluten, setGluten] = useState(false); // gluten free filter option
@@ -28,8 +28,8 @@ export default function Recipes() {
 
   //link filter state data
 
-  const handleDiet = diet => {
-    setDiet(diet);
+  const handleVegan = vegan => {
+    setVegan(vegan);
   };
 
   const handleTime = time => {
@@ -84,7 +84,7 @@ export default function Recipes() {
     const applyFilters = () => {
       let newRecipes = searchAPI;
 
-      if (diet) {
+      if (vegan) {
         newRecipes = newRecipes.filter(recipe => recipe.vegan === true);
       }
       if (cooktime <= 120) {
@@ -103,21 +103,28 @@ export default function Recipes() {
     };
 
     applyFilters();
-  }, [diet, cooktime, dairy, gluten, searchAPI]);
+  }, [vegan, cooktime, dairy, gluten, searchAPI]);
 
   return (
     <div className="recipes-container">
       <h1>
-        Search Results for <b>{query}</b>
+        Vegetarian Search Results for <b>{query}</b>
       </h1>
-      <div className="filter-button" onClick={() => setShowFilters(true)}>
-        <span>Filters</span>
-        <GiFunnel />
+      <div className="search-filters-section">
+        <div className="filter-button" onClick={() => setShowFilters(true)}>
+          <span>Filters</span>
+          <GiFunnel />
+        </div>
+        <div className="active-filters">
+          {vegan && <div>vegan</div>}
+          {dairy && <div>dairy free</div>}
+          {gluten && <div>gluten free</div>}
+        </div>
       </div>
       <div className={`${showFilters ? '' : 'hide-filters'}`}>
         <SearchFilters
           handleTime={handleTime}
-          handleDiet={handleDiet}
+          handleVegan={handleVegan}
           handleDairy={handleDairy}
           handleGluten={handleGluten}
           closePopup={() => setShowFilters(false)}

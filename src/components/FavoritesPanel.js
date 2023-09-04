@@ -34,7 +34,10 @@ export default function FavoritesPanel() {
         )}
         {!isLoading && favRecipes.length === 0 && (
           <div className="no-favorites">
-            <h3 className="no-recipes">No favorite recipes here.</h3>
+            <p className="no-recipes">
+              No favorite recipes here. Save your favorite recipes clicking on
+              the ♡
+            </p>
             <Link to={'/'}>
               <span className="favorites-back-home">
                 <FaChevronCircleLeft className="mr-4" />

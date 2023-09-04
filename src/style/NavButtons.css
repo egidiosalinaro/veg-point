@@ -1,4 +1,9 @@
-.nav-buttons {
+.no-favorites a {
+  text-decoration: none;
+}
+
+.nav-buttons,
+.favorites-back-home {
   display: flex;
   justify-content: center;
   color: var(--moss-green);

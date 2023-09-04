@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function SearchFilters({
-  handleDiet,
+  handleVegan,
   handleTime,
   handleDairy,
   handleGluten,
@@ -18,7 +18,7 @@ export default function SearchFilters({
             <input
               type="checkbox"
               className="filter-checkbox"
-              onClick={e => handleDiet(!!e.target.checked)}
+              onClick={e => handleVegan(!!e.target.checked)}
             />
           </div>
           <div className="dairy">
