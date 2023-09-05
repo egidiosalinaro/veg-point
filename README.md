@@ -68,7 +68,6 @@ From any page, the user can search a keyword using the `searchBar` component ins
 
 ### Built With :bricks:
 
-JavaScript is basically all I used to bootstrap this project.
 I created the app using React: every html element is created with the jsx sintax; style is build using the new <ins><strong>*CSS nesting*</strong></ins> feature*.
 
 :exclamation::exclamation: `* CSS nesting is a relatively new feature, check its` <a href="https://caniuse.com/css-nesting" target="_blank">browser compatibility</a> `to be sure you have a full user experience of the app.` :exclamation::exclamation:
