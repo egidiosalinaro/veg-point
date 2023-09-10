@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { FavoritesContext } from '../context/FavoritesContextProvider';
 import FavCard from './FavCard';
-import LoadingSpinner from './LoadingSpinner';
+import LoadingSpinner from './LoadingSpinner/LoadingSpinner';
 
 import { FaChevronCircleLeft } from 'react-icons/fa';
 

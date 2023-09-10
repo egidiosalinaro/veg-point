@@ -1,4 +1,4 @@
-import Logo from '../img/logo.png';
+import Logo from '../../img/logo.png';
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa';
 
 export default function Footer() {

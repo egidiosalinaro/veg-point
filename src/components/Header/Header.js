@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
-import SearchBar from './SearchBar';
-import Title from '../img/title.png';
+import SearchBar from '../SearchBar/SearchBar';
+import Title from '../../img/title.png';
 
 export default function Header() {
   return (

@@ -8,8 +8,6 @@
     <a href="https://vegpoint-egidiosalinaro.netlify.app/" target="_blank">Try the app!</a>
   </p>
 
-
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -34,8 +32,6 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project :question:
 
@@ -48,7 +44,7 @@
 </p>
 
 The goal of the project is to deliver a veg recipes application aimed to bring new cooking ideas. To do so, I used the <a href="https://spoonacular.com/" target="_blank">Spoonacular</a> API data, fetched using the _axios_ library.
-  
+
 At its startup the application displays a selection of random recipes with photos, servings and preparation time, and a searchbar. The recipes carousel UX/UI is rendered using `React Swiper`. The user can select a recipe to check ingredients and step-by-step cooking instructions, save a favorite recipe in `Local Storage` using the heart `react-icon`, or search for a recipe/ingredient using the searchbar.
 
 Clicking a recipe card takes the user to the recipe dedicated page, using `react-router`, where ingredients, cooking instructions and similar dishes can be found. The user can also use this page to save the recipe to favorites.
@@ -63,8 +59,6 @@ From any page, the user can search a keyword using the `searchBar` component ins
 </p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 ### Built With :bricks:
 
@@ -86,8 +80,6 @@ I created the app using React: every html element is created with the jsx sintax
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
 ## Getting Started :clapper:
 
@@ -105,13 +97,16 @@ You need to have Node and npm installed. You can check the version you have inst
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 ### Installation :gear:
 
 Once downloaded this repo, in the project directory, you can run:
 
 ```sh
+npm install
+```
+
+```sh
+=======
 npm start
 ```
 
@@ -140,7 +135,6 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- USAGE EXAMPLES -->

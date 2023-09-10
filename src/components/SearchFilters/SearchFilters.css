@@ -101,15 +101,15 @@
       }
 
       .vegan input {
-        background-image: url(../img/icons/vegan.png);
+        background-image: url(../../img/icons/vegan.png);
       }
 
       .dairy input {
-        background-image: url(../img/icons/dairy-free.png);
+        background-image: url(../../img/icons/dairy-free.png);
       }
 
       .gluten input {
-        background-image: url(../img/icons/gluten-free.png);
+        background-image: url(../../img/icons/gluten-free.png);
       }
     }
 
