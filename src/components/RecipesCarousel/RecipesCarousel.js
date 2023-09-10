@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-import SearchFilters from './SearchFilters';
-import Card from './Card';
-import LoadingSpinner from './LoadingSpinner';
+import SearchFilters from '../SearchFilters/SearchFilters';
+import Card from '../Card/Card';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 import { GiFunnel } from 'react-icons/gi';
 

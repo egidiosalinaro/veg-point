@@ -1,11 +1,11 @@
 import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 
-import { FavoritesContext } from '../context/FavoritesContextProvider';
+import { FavoritesContext } from '../../context/FavoritesContextProvider';
 
 import { BsPeople, BsHeart, BsHeartFill } from 'react-icons/bs';
 import { TfiTimer } from 'react-icons/tfi';
-import noImage from '../img/no-image.png';
+import noImage from '../../img/no-image.png';
 
 export default function Card(props) {
   const [favorite, setFavorite] = useState(false);

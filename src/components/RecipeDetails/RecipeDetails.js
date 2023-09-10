@@ -2,13 +2,13 @@ import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-import { FavoritesContext } from '../context/FavoritesContextProvider';
-import Ingredient from './Ingredient';
-import Instruction from './Instruction';
-import Card from './Card';
-import LoadingSpinner from './LoadingSpinner';
-import NavButtons from './NavButtons';
-import noImage from '../img/no-image.png';
+import { FavoritesContext } from '../../context/FavoritesContextProvider';
+import Ingredient from '../Ingredient/Ingredient';
+import Instruction from '../Instruction/Instruction';
+import Card from '../Card/Card';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
+import NavButtons from '../NavButtons/NavButtons';
+import noImage from '../../img/no-image.png';
 
 import { BiRestaurant, BiHeart, BiFoodMenu } from 'react-icons/bi';
 import { TfiTimer } from 'react-icons/tfi';

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-import Card from './Card';
-import LoadingSpinner from './LoadingSpinner';
+import Card from './Card/Card';
+import LoadingSpinner from './LoadingSpinner/LoadingSpinner';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, {
