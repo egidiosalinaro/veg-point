@@ -8,6 +8,8 @@
     <a href="https://vegpoint-egidiosalinaro.netlify.app/" target="_blank">Try the app!</a>
   </p>
 
+
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -31,6 +33,8 @@
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
+
+
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project :question:
@@ -60,6 +64,8 @@ From any page, the user can search a keyword using the `searchBar` component ins
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+
 ### Built With :bricks:
 
 I created the app using React: every html element is created with the jsx sintax; style is build using the new <ins><strong>*CSS nesting*</strong></ins> feature*.
@@ -75,17 +81,17 @@ I created the app using React: every html element is created with the jsx sintax
 <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> React <br>
 <a href="https://reactrouter.com/en/main" target="_blank" rel="noreferrer"> <img src="https://github.com/egidiosalinaro/veg-point/assets/129901135/8d4f5b36-f49e-44a0-b3e7-81ee67c51dd8" alt="react" width="40" height="40"/> </a> React Router <br>
 <a href="https://reactrouter.com/en/main" target="_blank" rel="noreferrer"> <img src="https://github.com/egidiosalinaro/veg-point/assets/129901135/8f59e51e-7d22-4e2d-8b27-df1d03b1c949" alt="react" width="40" height="40"/> </a> React Swiper
-
 </p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 <!-- GETTING STARTED -->
 ## Getting Started :clapper:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). <br>
 I published this code at the link https://vegpoint-egidiosalinaro.netlify.app/ so you can use it, but if you want you can also install it in your device using React:
-
 
 ### Prerequisites :pencil:
 
@@ -101,24 +107,20 @@ You need to have Node and npm installed. You can check the version you have inst
 
 Once downloaded this repo, in the project directory, you can run:
 
+* installing libraries
 ```sh
 npm install
 ```
 
+* run the app
 ```sh
 npm start
 ```
 
-Runs the app in the development mode.\
+This runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-```sh
-npm test
-```
-
-Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ```sh
@@ -136,6 +138,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+
 <!-- USAGE EXAMPLES -->
 ## Usage :joystick:
 
@@ -146,7 +149,6 @@ At its startup the application displays a selection of random recipes with photo
 Favorites page can be found by clicking on the relevant button in the header, near the searchbar. In this page you can also delete a recipe from favorites using the trash icon.
 
 From any page, you can search a keyword/recipe using the search bar and then filter search results accordingly to your diet.
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
