@@ -33,7 +33,6 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
-
 ## About The Project :question:
 
 <br>
@@ -63,7 +62,7 @@ From any page, the user can search a keyword using the `searchBar` component ins
 
 ### Built With :bricks:
 
-I created the app using React: every html element is created with the jsx sintax; style is build using the new <ins><strong>_CSS nesting_</strong></ins> feature\*.
+I created the app using React: every html element is created with the jsx sintax; style is build using the new <ins><strong>*CSS nesting*</strong></ins> feature*.
 
 :exclamation::exclamation: `* CSS nesting is a relatively new feature, check its` <a href="https://caniuse.com/css-nesting" target="_blank">browser compatibility</a> `to be sure you have a full user experience of the app.` :exclamation::exclamation:
 
@@ -82,17 +81,16 @@ I created the app using React: every html element is created with the jsx sintax
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
-
 ## Getting Started :clapper:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). <br>
 I published this code at the link https://vegpoint-egidiosalinaro.netlify.app/ so you can use it, but if you want you can also install it in your device using React:
 
+
 ### Prerequisites :pencil:
 
 You need to have Node and npm installed. You can check the version you have installed running:
-
-- npm
+* npm
   ```sh
   npm -v
   ```
@@ -108,6 +106,7 @@ npm install
 ```
 
 ```sh
+=======
 npm start
 ```
 
@@ -137,50 +136,55 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- USAGE EXAMPLES -->
 
+<!-- USAGE EXAMPLES -->
 ## Usage :joystick:
 
 Use this app to try new green cooking ideas.
-
+  
 At its startup the application displays a selection of random recipes with photos, servings and preparation time, and a searchbar. Select a recipe to check ingredients and step-by-step cooking instructions, save a favorite recipe using the heart icon, or search for a recipe/ingredient using the searchbar.
 
 Favorites page can be found by clicking on the relevant button in the header, near the searchbar. In this page you can also delete a recipe from favorites using the trash icon.
 
 From any page, you can search a keyword/recipe using the search bar and then filter search results accordingly to your diet.
 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ROADMAP -->
 
+
+<!-- ROADMAP -->
 ## Roadmap :world_map:
 
 - [x] fetching API data
 - [x] insert searchbar query into API searching machine
 - [x] creating components
 - [x] saving favorites to local storage
-- [x] creating favorites page using context provider
+- [x] creating favorites page using context provider 
 - [x] creating other pages via router
 - [x] styles improvements
-  - [x] coherent and user-friendly UX/UI
-  - [x] CSS nesting
-  - [x] learning React Swiper
+    - [x] coherent and user-friendly UX/UI
+    - [x] CSS nesting
+    - [x] learning React Swiper
 - [x] final code cleaning and code consistency
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LICENSE -->
 
+
+<!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTACT -->
 
+
+<!-- CONTACT -->
 ## Contact
 
 egidiosalinaro@gmail.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
