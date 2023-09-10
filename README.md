@@ -104,6 +104,10 @@ You need to have Node and npm installed. You can check the version you have inst
 Once downloaded this repo, in the project directory, you can run:
 
 ```sh
+npm install
+```
+
+```sh
 npm start
 ```
 
